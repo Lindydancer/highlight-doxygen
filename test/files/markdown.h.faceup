@@ -1,0 +1,248 @@
+«m:// »«x:markdown.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Example C++ code with Doxygen markdown-style blocks.
+»
+«m:// »«x:Code:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains an implicit verbatim block.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:This is verbatim
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:   And this too.
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Just check so that verbatim blocks aren't treated as code:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:if (true)
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:  ...
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! End of comment.
+»»
+«k:class» «t:TestVerbatimImplicit»
+{
+«k:public»:
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:!
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * The following is not seen as a verbatim block by Doxygen
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Zero
+»  «:highlight-doxygen-comment: *  One
+»  «:highlight-doxygen-comment: *   Two
+»  «:highlight-doxygen-comment: *    Three
+»  «:highlight-doxygen-comment: *     Four
+»  «:highlight-doxygen-comment: *      Five
+»  «:highlight-doxygen-comment: *       Six
+»  «:highlight-doxygen-comment: *        Seven
+»  «:highlight-doxygen-comment: *         Eight
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Part of the following is seen as verbatim block by Doxygen.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block:    Eight
+»»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block:   Seven
+»»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block:  Six
+»»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block: Five
+»»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block:Four <---- Last line of the block
+»»  «:highlight-doxygen-comment: *    Three
+»  «:highlight-doxygen-comment: *   Two
+»  «:highlight-doxygen-comment: *  One
+»  «:highlight-doxygen-comment: * Zero
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * This is more plain text.
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestVariableIndentation»();
+
+  «m:// »«x:The following two test shows that the block must be indented four
+»  «m:// »«x:spaces more than the surrounding text, even if the surrounding
+»  «m:// »«x:text starts one column to the right due to the "!" sign.
+»
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! Test initial block.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *     Four spaces.  Not seen as block by Doxygen.
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestInitialBlock4»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! Test initial block.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *      «:highlight-doxygen-code-block:Five spaces.  Seen as block by Doxygen.
+»»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestInitialBlock5»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! Test block at the end.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * This is plain text.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *     «:highlight-doxygen-code-block:This is a block
+»»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestBlockAtTheEnd»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! Test if block can start without an empty line. (No, they can't.)
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Text
+»  «:highlight-doxygen-comment: *     Maybe block
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Text2
+»  «:highlight-doxygen-comment: *     Maybe block
+»  «:highlight-doxygen-comment: * Text3
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestTightBlock»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! Test if blocks indented a bit at a time is seen as a block.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Text1
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *    Text2
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *       Text3
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *           «:highlight-doxygen-code-block:Text4   <- Indented with 4 spaces, seen as block.
+»»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *       Text5
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *    Text6
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Text1
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *    Text2
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *       Text3
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *           «:highlight-doxygen-code-block:Text4   <- Indented with 4 spaces, seen as block.
+»»  «:highlight-doxygen-comment: *       Text5 <- Not part of block.
+»  «:highlight-doxygen-comment: *    Text6
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestStaggering»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:!
+»  «:highlight-doxygen-comment: * Test if a block can start with a more indented line.
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: *        «:highlight-doxygen-code-block: Text8
+»»  «:highlight-doxygen-comment: *        «:highlight-doxygen-code-block:Text7
+»»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * Text after.
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestMoreIndented»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «t:void» «f:TestEmptySlashSlashComment»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test code block at end of C++ comment.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:if (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:  ..
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «t:void» «f:TestEndOfSlashSlashComment»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test «t:MarkDown» code blocks after non-straight left margin.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Alpha
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!  Beta
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   Gamma
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     Is this a code block? (NO, according to Doxygen)
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   Alpha
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!  Beta
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Gamma
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:Is this a code block? (YES, according to Doxygen)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Alpha
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!  Beta
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Gamma
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:Is this a code block? (YES, according to Doxygen)
+»»»  «t:void» «f:TestNonStraightMargin»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test code block with empty lines
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Empty line (no spaces):
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:if (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «t:void» «f:TestEmptyLinesInCodeBlock»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test explicit code blocks.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Explicit code block:
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:endcode»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Explicit code block after markdown block:
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:Is this a code block? (YES, according to Doxygen)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:endcode»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Explicit code block before markdown block, same indentation:
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:endcode»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     Is this a code block? (NO, according to Doxygen)
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Explicit code block before markdown block, more indentation:
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     \«:highlight-doxygen-command:endcode»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         «:highlight-doxygen-code-block:Is this a code block? (YES, according to Doxygen)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Explicit code block before markdown block, commands indented:
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!                         \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» (test)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!                         \«:highlight-doxygen-command:endcode»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         Is this a code block? (NO, according to Doxygen)
+»»  «t:void» «f:TestMixExplicitAndImplicit»();
+};
+
+«m:// »«x:markdown.h ends here
+»

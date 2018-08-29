@@ -1,0 +1,21 @@
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:file»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:brief» Example Doxygen file demonstrating highlight-doxygen.el
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This function does something.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:a» «:highlight-doxygen-variable:a_value» the first value
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:a» «:highlight-doxygen-variable:another_value» the second value
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Example:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:{
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  «t:int» «v:this_is_a_value» = ...;
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  «k:while» (MyFunction(this_is_a_value, 2))
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  {
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    «:highlight-doxygen-code-block:// do something»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  }
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»
+«t:void» «f:MyFunction»(«t:int» «v:a_value», «t:int» «v:another_value»);

@@ -1,0 +1,87 @@
+«m:// »«x:sections.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:This file contains Doxygen commands for writing sections and pages.
+»
+«m:// »«x:Code:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:mainpage» «:highlight-doxygen-heading-1:This is the title of the documentation»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body text of the main page.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:section» «:highlight-doxygen-label:sec1»«:highlight-doxygen-heading-2: This is the first section»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body text of the first section.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:par» «:highlight-doxygen-heading-4:This is a paragraph title»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Paragraph body.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:vhdlflow» «:highlight-doxygen-heading-4:This is VHDL diagram title»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Paragraph body. (This only work in VHDL...)
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:section» «:highlight-doxygen-label:sec2»«:highlight-doxygen-heading-2: This is the second section»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body text of the second section.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:subsection» «:highlight-doxygen-label:sub21»«:highlight-doxygen-heading-3: This is a subsection»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body text of the subsection.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! In \«:highlight-doxygen-command:ref» «:highlight-doxygen-link:sec1» and \«:highlight-doxygen-command:ref» «:highlight-doxygen-link:par211» you can read more.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:subsubsection» «:highlight-doxygen-label:sub211»«:highlight-doxygen-heading-4: This is a subsubsection»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body text of the subsubsection.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:paragraph» «:highlight-doxygen-label:par211»«:highlight-doxygen-heading-5: This is a paragraph in the subsubsection»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the body of the paragraph.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! And more text (wonder where this will go).
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:page» «:highlight-doxygen-label:page1»«:highlight-doxygen-heading-2: This is a page»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Without quotes.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:page» «:highlight-doxygen-label:page2»«:highlight-doxygen-heading-2: "This is another page"»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! With quotes. (Incorrectly formed for Doxygen)
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:subpage» «:highlight-doxygen-label:subpage1»«:highlight-doxygen-heading-3: This is a subpage»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Without quotes. (Incorrectly formed for Doxygen)
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:subpage» «:highlight-doxygen-label:subpage2»«:highlight-doxygen-heading-3: "This is another page"»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! With quotes.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:subpage» «:highlight-doxygen-label:subpage3»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Without title.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! And even more text (wonder where this will go).
+»»
+«m:// »«x:sections.h ends here
+»

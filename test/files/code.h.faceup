@@ -1,0 +1,139 @@
+«m:// »«x:code.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Example C++ code with Doxygen "code" blocks.
+»
+«m:// »«x:Code:
+»
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a "code" block.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:«k:if» («c:true»)
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:{
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  ...
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This text is after the code block.
+»»
+«k:class» «t:TestCodeKeyword»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a "code" block with a known extension.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»{.rb}
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:«k:def» «f:foo»(&block b)
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:{
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  «k:yield»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This text is after the code block.
+»»
+«k:class» «t:TestRubyCodeKeyword»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a "code" block with an unknown extension.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»{.unknown}
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:def foo(&block b)
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:{
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:  yield
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This text is after the code block.
+»»
+«k:class» «t:TestUnknownCodeKeyword»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a one-line "code" block.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Note: When Doxygen renders the following paragraph, it is split
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! into three separate paragraphs, hence this isn't a good way to
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! write inline code snippets.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Here comes some code \«:highlight-doxygen-command:code» «:highlight-doxygen-code-block:«k:while»(«c:true»); »\«:highlight-doxygen-command:endcode» but this isn't
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! code.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! More comments.
+»»
+«k:class» «t:TestCodeKeywordOneLine»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Testing dot.  This relies on having the package
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! `graphviz-dot-mode' installed.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dot»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:digraph example {
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:node [shape=record, fontname=Helvetica, fontsize=10];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   b [ label="class B" URL="\ref B"];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   c [ label="class C" URL="\ref C"];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   b -> c [ arrowhead="open", style="dashed" ];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:enddot»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Note: The following doesn't work properly.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:\«:highlight-doxygen-command:dot» "Caption" width=10cm
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:digraph example {
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:node [shape=record, fontname=Helvetica, fontsize=10];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   b [ label="class B" URL="\ref B"];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   c [ label="class C" URL="\ref C"];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:   b -> c [ arrowhead="open", style="dashed" ];
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:}
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:enddot»
+»»
+«k:class» «t:TestDotBlock»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test code block indented with tabs
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Aligned with spaces.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» («c:true»)    «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!	«:highlight-doxygen-code-block:{            «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!	«:highlight-doxygen-code-block:  «c:true»;      «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}            «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Not aligned.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   «:highlight-doxygen-code-block:«k:if» («c:true»)      «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   «:highlight-doxygen-code-block:{              «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!«:highlight-doxygen-code-block:	«c:true»;        «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   «:highlight-doxygen-code-block:}              «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:endcode»
+»»
+«m:// »«x:code.h ends here
+»

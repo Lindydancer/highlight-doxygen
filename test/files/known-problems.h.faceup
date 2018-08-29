@@ -1,0 +1,114 @@
+«m:// »«x:known-problems.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Example C++ code with Doxygen comments demonstrates a number of
+»«m:// »«x:known problems with the `highlight-doxygen' package.
+»
+«m:// »«x:Code:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Doxygen comments with known problems.
+»»«k:class» «t:TestKnownProblemsClass»
+{
+«k:public»:
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! This is a C-style block.
+»  «:highlight-doxygen-comment:   The package can't highlight the following empty line as the rest
+»  «:highlight-doxygen-comment:   of the block, because there are no characters on it to highlight.
+
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+»  «t:void» «f:TestCStyleBlocksWithEmptyLines»();
+
+  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:brief» Some text
+»  «:highlight-doxygen-comment: *  \«:highlight-doxygen-command:namespace» «t:«:highlight-doxygen-namespace:FakeKnownProblemNamespace»»
+»  «:highlight-doxygen-comment: *
+»  «:highlight-doxygen-comment: * This and the next comment should be highlighted as separate
+»  «:highlight-doxygen-comment: * comment blocks.
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+
+»  «m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:brief» Some text
+»  «:highlight-doxygen-comment: *  \«:highlight-doxygen-command:namespace» «t:«:highlight-doxygen-namespace:FakeKnownProblemNamespace2»»
+»  «:highlight-doxygen-comment: */»»«:highlight-doxygen-comment:
+
+»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Code block with empty lines.  Again, there are no characters to
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! put the highlighting on, to make it appear like a box.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:«k:if» («c:true»)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:{
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!     «:highlight-doxygen-code-block:}
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»  «t:void» «f:TestCodeBlockWithEmptyLine»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test code block where one "endcode" is missing.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:code»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    «k:if» («c:true»)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    {
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:      ...
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    }
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:«t:This» «v:should» «k:not» be highlighted as code.
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:\code
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    «k:if» («c:true»)
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    {
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:      ...
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:    }
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcode»
+»»  «t:void» «f:TestMissingEndCode»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test "verbatim".
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Currently, the `highlight-doxygen' package highlights verbatim
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! blocks like code blocks.  However, in reality EVERYTHING between
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! "verbatim" and "endverbatim" is included, even comment start
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! characters.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:verbatim»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:This block is verbatim (including the //! on this and the next line).
+»»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endverbatim»
+»»  «t:void» «f:TestVerbatim»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test "verbatim" across Doxygen comments.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:verbatim»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is verbatim.
+»»  «t:void» «f:TestVerbatimAcrossComments_DoxygenThinksThisIsPartOfTheComment»();
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is also verbatim.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endverbatim»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Text after "verbatim".
+»»
+  «t:void» «f:TestVerbatimAcrossComments2»();
+};
+
+«m:// »«x:For code line comments, the "*/" should not be highlighted.
+»
+«t:int» «v:x»;
+
+«m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:int» «v:x»; */»»»«:highlight-doxygen-comment:
+»
+«m:// »«x:known-problems.h ends here
+»

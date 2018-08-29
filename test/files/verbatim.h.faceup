@@ -1,0 +1,84 @@
+«m:// »«x:verbatim.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Example C++ code with Doxygen "verbatim" blocks.
+»
+«m:// »«x:Code:
+»
+«m:// »«x:Note: It appears as though "verbatim" can't stretch across C++
+»«m:// »«x:comments. Also, it emits formatting like leading asterisks.
+»«m://»«x:
+»«m:// »«x:In most cases, a "\code" block or a MarkDown-style verbatim is
+»«m:// »«x:perferred.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a "verbatim" block.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:verbatim»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-code-block:This is verbatim
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endverbatim»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! More comments.
+»»
+«k:class» «t:TestVerbatimKeywordCpp»
+{
+};
+
+
+«m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! This comment contains a "verbatim" block.
+ *
+ * The following will contain the " *":s in the output.
+ *
+ * \«:highlight-doxygen-command:verbatim»
+ * «:highlight-doxygen-code-block:This is verbatim
+» * \«:highlight-doxygen-command:endverbatim»
+ *
+ * More comments.
+ *
+ * \«:highlight-doxygen-command:verbatim»
+«:highlight-doxygen-code-block:This is also verbatim
+»\«:highlight-doxygen-command:endverbatim»
+ *
+ */»»«:highlight-doxygen-comment:
+»
+«k:class» «t:TestVerbatimKeywordC»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This comment contains a "verbatim" block.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Note: When Doxygen renders the following paragraph, it is split
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! into three separate paragraphs, hence this isn't a good way to
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! write inline code snippets.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! The following \«:highlight-doxygen-command:verbatim» «:highlight-doxygen-code-block:is verbatim »\«:highlight-doxygen-command:endverbatim» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! More comments.
+»»
+«k:class» «t:TestVerbatimKeywordOneLine»
+{
+};
+
+«m:// »«x:verbatim.h ends here
+»

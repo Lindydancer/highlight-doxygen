@@ -1,0 +1,607 @@
+«m:// »«x:normal.h --- Example C++ code with Doxygen comments.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Copyright (C) 2018 Anders Lindgren
+»
+«m:// »«x:Author: Anders Lindgren
+»
+«m:// »«x:This file is part of the `highlight-doxygen' package.
+»
+«m:// »«x:This program is free software; you can redistribute it and/or modify
+»«m:// »«x:it under the terms of the GNU General Public License as published by
+»«m:// »«x:the Free Software Foundation, either version 3 of the License, or
+»«m:// »«x:(at your option) any later version.
+»
+«m:// »«x:This program is distributed in the hope that it will be useful,
+»«m:// »«x:but WITHOUT ANY WARRANTY; without even the implied warranty of
+»«m:// »«x:MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+»«m:// »«x:GNU General Public License for more details.
+»
+«m:// »«x:You should have received a copy of the GNU General Public License
+»«m:// »«x:along with this program.  If not, see <http://www.gnu.org/licenses/>.
+»
+«m:// »«x:Commentary:
+»
+«m:// »«x:Example C++ code with Doxygen comments demonstrates a number of
+»«m:// »«x:known problems with the `highlight-doxygen' package.
+»
+«m:// »«x:Code:
+»
+«m:// »«x:This file contains most, if not all, doxygen commands.
+»«m://»«x:
+»«m:// »«x:The main purpouse of this file is for regression testing of the
+»«m:// »«x:Emacs package "highlight-doxygen".
+»«m://»«x:
+»«m:// »«x:Doxygen comments with code examples are in separate files.
+»
+«m:// »«x:Conventions:
+»«m://»«x:
+»«m:// »«x:Constructs defined in this file are named TestXxx.
+»«m://»«x:
+»«m:// »«x:Constructs defined using doxygen commands like "\class" are named
+»«m:// »«x:FakeXxx or fakexxxx.
+»
+
+«m:// »«x:------------------------------------------------------------
+»«m:// »«x:Commands that define construct somewhere else
+»«m://»«x:
+»
+«m:// »«x:TODO: The [header-file] [header-name] syntax in all of the following:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «:highlight-doxygen-type:fakeclass»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake class.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClass»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake class.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:enum» «:highlight-doxygen-type:fakeenum»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake enum.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:enum» «t:«:highlight-doxygen-type:FakeEnum»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake enum.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:interface» «:highlight-doxygen-type:fakeinterface»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake interface.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:interface» «t:«:highlight-doxygen-type:FakeInterface»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake interface.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:namespace» «:highlight-doxygen-namespace:fakenamespace»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake namespace.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:namespace» «t:«:highlight-doxygen-namespace:FakeNamespace»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake namespace.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:namespace» «t:fakeparent»::«:highlight-doxygen-namespace:fakenamespace»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake namespace.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:namespace» «t:«t:FakeParent»»::«t:«:highlight-doxygen-namespace:FakeNamespace»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake namespace.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:struct» «:highlight-doxygen-type:fakestruct»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake struct.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:struct» «t:«:highlight-doxygen-type:FakeStruct»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake struct.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:union» «:highlight-doxygen-type:fakeunion»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake union.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:union» «t:«:highlight-doxygen-type:FakeUnion»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake union.
+»»
+«m:// »«x:Note: Objective-C.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:category» fakecategory
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake category.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:category» «t:FakeCategory»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake category.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:protocol» «:highlight-doxygen-type:fakeprotocol»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake protocol.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:protocol» «t:«:highlight-doxygen-type:FakeProtocol»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake protocol.
+»»
+
+
+«m:// »«x:--------------------
+»«m:// »«x:Class
+»«m://»«x:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class for testing "related" etc.
+»»«k:class» «t:TypeClass»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A related function. \«:highlight-doxygen-command:relates» «t:«:highlight-doxygen-type:TypeClass»».
+»»«t:void» «f:TestRelates»(«t:void»);
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a namespace.
+»»«k:namespace» «c:TestNamespace»
+{
+}
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a union.
+»»«k:union» «t:TestUnion»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an enum.
+»»«k:enum» «t:TypeEnum»
+{
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Template class.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:tparam» «:highlight-doxygen-variable:arraysize» size of array.
+»»«k:template»<«t:N» «v:arraysize»>
+«k:class» «t:TestTemplateClass»
+{
+  «t:int» «v:arr»[arraysize];
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Function that throws.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:throw» «t:«:highlight-doxygen-exception:TestException»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:throw» «:highlight-doxygen-exception:Simple»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:throw» «:highlight-doxygen-exception:lowercase»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:throw» «t:Qualified»::«:highlight-doxygen-exception:Tip»
+»»«t:void» «f:TestThrows»() «k:throw» TestException;
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Another function that throws.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:throw» «t:std»::«:highlight-doxygen-exception:out_of_range».
+»»«t:void» «f:TestThrows2»() «k:throw» «c:std»::out_of_range;
+
+«m:// »«x:--------------------
+»«m:// »«x:section-label
+»«m://»«x:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:if» «:highlight-doxygen-section-label:alabel»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the "this" part.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:elseif» «:highlight-doxygen-section-label:alabel»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the "else" part.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endif»
+»»
+«t:void» «f:TestSectionLabel»();
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:ifnot» «:highlight-doxygen-section-label:alabel»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the "this" part.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:elseif» «:highlight-doxygen-section-label:alabel»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is the "else" part.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endif»
+»»
+«t:void» «f:TestSectionLabel2»();
+
+
+«m:// »«x:--------------------
+»«m:// »«x:Groups
+»«m://»«x:
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:defgroup» «:highlight-doxygen-group:group1» This is a group title.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a group body.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:addtogroup» «:highlight-doxygen-group:group1»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! More group body.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:weakgroup» «:highlight-doxygen-group:my_weak_group»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a weak group.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:ingroup» «:highlight-doxygen-group:group1»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is in group1.
+»»
+«t:void» «f:TestIngroup»(«t:void»);
+
+«m:// »«x:TODO: Add support for specifying multiple groups.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:ingroup» «:highlight-doxygen-group:group1» my_weak_group
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is in group1 and my_weak_group.
+»»
+«t:void» «f:TestIngroup2»(«t:void»);
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir» «:highlight-doxygen-filename:This/is/a/dir»
+»»
+«t:void» «f:TestDir»(«t:void»);
+
+«m:// »«x:TODO: If Doxygen can handle this, ensure we can too.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir» "This is a path with spaces"
+»»
+«t:void» «f:TestDir2»(«t:void»);
+
+«m:// »«x:TODO: Check how Doxygen handle this.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir» «:highlight-doxygen-filename:a_dir» This is not a dir.
+»»
+«t:void» «f:TestDir3»(«t:void»);
+
+«m:// »«x:--------------------
+»«m:// »«x:With filename arguments.
+»
+«m:// »«x:Syntax:
+»«m://»«x:
+»«m://    »«x:\class name [<header-file>] [<header-name>]
+»
+
+«m:// »«x:Note: The "." isn't written in verbatim, as that produces a link.
+»
+«m:// »«x:Conclusion: <header-file> can be foo.h or "foo.h".
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameP»» other.h
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with other dot h
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameQ»» "other.h"
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with "other dot h"
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNamePP»» other.h sub/other.h
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with other dot h sub/other dot h
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNamePQ»» other.h "sub/other.h"
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with other dot h "sub/other dot h".
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNamePS»» other.h <sub/other.h>
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with other dot h \<sub/other dot h\>.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment:/**»»«x:«:highlight-doxygen-comment:
+ * \«:highlight-doxygen-command:a» «:highlight-doxygen-variable:arg»
+ */»»«:highlight-doxygen-comment:
+»
+«m:// »«x:Note: The following doesn't seem to work in doxygen.
+»«m://»«x:
+»«m:// »«x:The documentation specifies:
+»«m://»«x:
+»«m://    »«x:\class name [<header-file>] [<header-name>]
+»«m://»«x:
+»«m:// »«x:I guess that the documentation should read:
+»«m://»«x:
+»«m://    »«x:\class name [<header-file> [<header-name>]]
+»
+«p:#if» 0
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameSubP»» sub/other.h
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with sub/other dot h.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameSubQ»» "sub/other.h"
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with "sub/other dot h".
+»»
+«m:// »«x:This fails badly, it generates "#include <<>".
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameS»» <other.h>
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with \<other dot h\>
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:class» «t:«:highlight-doxygen-type:FakeClassNameSubS»» <sub/other.h>
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Class with \<sub/other dot h\>.
+»»«p:#endif»
+
+
+«m:// »«x:TODO: This is another animal than the above.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:exception» «:highlight-doxygen-exception:fakeexception»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake exception.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:exception» «t:«:highlight-doxygen-exception:FakeException»»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a fake exception.
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:throw» «:highlight-doxygen-exception:throw» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»
+
+«m:// »«x:------------------------------------------------------------
+»«m:// »«x:Commands that define constructs in the file
+»«m://»«x:
+»
+«m:// »«x:Place this is a comment OF something.
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Link to the other.h header file.
+»»«:highlight-doxygen-comment:
+
+
+»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take a variable as argument.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! TODO: param
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:a» «:highlight-doxygen-variable:parameter» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! TODO: Is this really a variable?
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:relates» «:highlight-doxygen-type:relates» but this doesn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:relatesalso» «:highlight-doxygen-type:relatesalso» but this doesn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:variable» «v:but» «k:this» isn«w:'»t.»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:def» variable but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This \«:highlight-doxygen-command:implements» «t:«t:FakeClass»»::«t:«:highlight-doxygen-type:FakeFunction»».
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This \«:highlight-doxygen-command:implements» «t:fakeclass»::«:highlight-doxygen-type:fakefunction».
+»»
+«k:class» «t:TestVarArgs»
+{
+};
+
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test if the argument can be placed on another line.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Highlighting for this is currently not supported.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«k:class» «t:TestLineBreaks»
+{
+«k:public»:
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test if \«:highlight-doxygen-command:a»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! my_argument can be on the next line.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Check if there can be an empty line between the command and the
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! agument, like \«:highlight-doxygen-command:a»
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! arg2 here.
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Doxygen handles line breaks, but not empty lines.
+»»  «t:void» «f:TestLineBreaks»(«t:int» «v:my_argument», «t:int» «v:arg2»)
+  {
+  }
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take a function name as arguments:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:retval» «:highlight-doxygen-code:function» but this isn't.
+»»
+«k:class» «t:TestRetval»
+{
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take a "word" as argument:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:a» «:highlight-doxygen-variable:parameter» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:p» «:highlight-doxygen-variable:parameter» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:anchor» anchor but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:b» «:highlight-doxygen-bold:bold» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:c» «:highlight-doxygen-code:code» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:e» «:highlight-doxygen-emphasize:emphasized» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is \«:highlight-doxygen-command:em» «:highlight-doxygen-emphasize:emphasized» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:retval» «:highlight-doxygen-code:ZERO»    if \«:highlight-doxygen-command:p» «:highlight-doxygen-variable:parameter» is zero
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:retval» «:highlight-doxygen-code:NONZERO» if \«:highlight-doxygen-command:p» «:highlight-doxygen-variable:parameter» is non-zero
+»»
+«t:int» «f:TestWordFunction»(«t:int» «v:parameter»)
+{
+  «k:if» (parameter > 0)
+  {
+    «k:return» NONZERO;
+  }
+  «k:else»
+  {
+    «k:return» ZERO;
+  }
+}
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Parameter commands
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param» «:highlight-doxygen-variable:plain» a plain parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param» [«:highlight-doxygen-direction:in»] «:highlight-doxygen-variable:x» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param» [«:highlight-doxygen-direction:out»] «:highlight-doxygen-variable:y» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param» [«:highlight-doxygen-direction:in»,«:highlight-doxygen-direction:out»] «:highlight-doxygen-variable:z» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Without whitespace:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param»[«:highlight-doxygen-direction:in»]«:highlight-doxygen-variable:x» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param»[«:highlight-doxygen-direction:out»]«:highlight-doxygen-variable:y» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param»[«:highlight-doxygen-direction:in»,«:highlight-doxygen-direction:out»]«:highlight-doxygen-variable:z» an "in" parameter
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Partially written:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:param»[«:highlight-doxygen-direction:in»]
+»»
+«t:void» «f:test»(«t:int» «v:plain», «t:int» «v:x», «t:int» «v:y», «t:int» «v:z»);
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:sa» «t:TestOptional»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:sa» Paragraph with «t:TestOptional» reference.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:sa» «:highlight-doxygen-link:http://www.some-company.com/a%20page.html»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:sa» This is a paragraph with links like this one
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-link:http://www.some-company.com/a%20page.html» and
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «f:function_like_this_one()».
+»»
+«k:class» «t:TestSeeAlso»
+{
+};
+
+«m:// »«x:TODO: link copydoc xrefitem if ifnot elseif
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take an optional argument:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! TODO: How?
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:cond»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:cond» «:highlight-doxygen-section-label:argument»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:cond» «:highlight-doxygen-section-label:argument1» argument2
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcond»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcond»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:endcond»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir» «:highlight-doxygen-filename:argument»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dir» «:highlight-doxygen-filename:argument1» argument2
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \~
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \~argument
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \~argument1 argument2
+»»
+«k:class» «t:TestOptional»
+{
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:ref» «:highlight-doxygen-link:a_reference» but this isn't.
+»»
+«k:class» «t:TestReference»
+{
+};
+
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Testing filenames:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» «:highlight-doxygen-filename:example» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» «:highlight-doxygen-filename:example.cpp» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» "example.cpp" but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» "a/path/to/an/example.cpp" but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» "a\«:highlight-doxygen-command:path»\«:highlight-doxygen-command:to»\«:highlight-doxygen-command:an»\«:highlight-doxygen-command:example».cpp" but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» "a path with spaces/example.cpp" but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» "a path with spaces\«:highlight-doxygen-command:example».cpp" but this isn't.
+»»
+«k:class» «t:TestFilename1»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take a file name as arguments:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:example» «:highlight-doxygen-filename:example.h» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:dont» dont.h but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:dontinclude» «:highlight-doxygen-filename:dontinclude.h» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:includelineno» «:highlight-doxygen-filename:includelineno.h» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:htmlinclude» «:highlight-doxygen-filename:htmlinclude.html» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:verbinclude» «:highlight-doxygen-filename:verbinclude.h» but this isn't.
+»»
+«k:class» «t:TestFilename2»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Commands that take one word as arguments:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:addtopage» addtopage but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:defgroup» «:highlight-doxygen-group:defgroup» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:weakgroup» «:highlight-doxygen-group:wekgroup» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:page» «:highlight-doxygen-label:page»«:highlight-doxygen-heading-2: but this isn't.»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is an \«:highlight-doxygen-command:anchor» anchor but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:ref» «:highlight-doxygen-link:ref» but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:section» «:highlight-doxygen-label:section»«:highlight-doxygen-heading-2: but this isn't.»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! This is a \«:highlight-doxygen-command:subsection» «:highlight-doxygen-label:subsection»«:highlight-doxygen-heading-3: but this isn't.»
+»»
+«k:class» «t:TestWord2»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Special:
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:ingroup» «:highlight-doxygen-group:arg1» arg2 arg3 arg4
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:dotfile» «:highlight-doxygen-filename:filename» "This is a caption" but this isn't.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:image» jpg filename "This is a caption"
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:image» jpg filename "This is a caption" size=100
+»»
+«k:class» «t:TestSpecial»
+{
+};
+
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! End-of-line code.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:fn» «:highlight-doxygen-code-block:«t:void» »«f:«:highlight-doxygen-code-block:«f:f»()»»«:highlight-doxygen-code-block:;»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:int» «v:x»;»
+»»«:highlight-doxygen-comment:
+»«m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:!
+ * \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:int» «v:x»;»
+ */»»«:highlight-doxygen-comment:
+
+»«m:«:highlight-doxygen-comment:/*»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:int» «v:x»; */»»»«:highlight-doxygen-comment:
+»
+
+«m:// »«x:------------------------------------------------------------
+»«m:// »«x:Copy commands
+»
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Test copy commands.
+»»«k:class» «t:TestCopy»
+{
+«k:public»:
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A function.
+»»  TestFunction(«t:int»);
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «f:«:highlight-doxygen-code-block:TestFunction()»»
+»»  «t:int» «f:TestFunction2»(«t:int» «v:parameter»);
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «:highlight-doxygen-code-block:TestFunction(«t:int»)»
+»»  «t:int» «f:TestFunction3»(«t:int» «v:parameter»);
+
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Function with types with spaces.
+»»  «t:int» «f:TestUnsignedLong»(«t:unsigned» «t:long» «v:parameter»);
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «:highlight-doxygen-code-block:TestUnsignedLong(«t:unsigned» «t:long»)»
+»»  «t:int» «f:TestUnsignedLong2»(«t:unsigned» «t:long» «v:parameter»);
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «:highlight-doxygen-code-block:TestUnsignedLong(«t:unsigned» «t:long»)» And some more text.
+»»  «t:int» «f:TestUnsignedLong3»(«t:unsigned» «t:long» «v:parameter»);
+
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «:highlight-doxygen-code-block:TestUnsignedLong(«t:unsigned» «t:long»)» \«:highlight-doxygen-command:return» a value.
+»»  «t:int» «f:TestUnsignedLong4»(«t:unsigned» «t:long» «v:parameter»);
+};
+
+
+
+«m:// »«x:normal.h ends here
+»
