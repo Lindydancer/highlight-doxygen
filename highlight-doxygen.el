@@ -1342,15 +1342,50 @@ Note that these rules can't contain anchored rules themselves."
              nil)))
 
        ;; --------------------
-       ;; Highlight "`foo`". Note that in Doxygen a quote cancels a
-       ;; backquote.
-       ;;
-       ;; TODO: Multi-line support.
-       ("`\\([^\n`']+\\)`"
-        (1 (progn
-             (goto-char (match-end 0))
-             font-lock-constant-face)
-           prepend))))))
+       ;; Inline markdown
+
+       ;; `code`    not code   `code`again`    not`code`embedded   `code``again`
+       ;; `code`,   not code   `code again``   not code            `code`
+       (,(rx space
+             (group ?` (not (any space "\r\n`"))
+                    (* (or (not (any ?`))
+                           (: (+ ?`) (not (any space punctuation "\r\n")))))
+                    (+ ?`))
+             (or (any space punctuation "\r\n") eol))
+        (1 (quote underline) prepend nil))
+       ;; *italic*  not italic *italic*again*  not*italic*embedded *italic**again*
+       ;; *italic*, not italic *italic again** not italic          *italic*
+       ;; _italic_  not italic _italic_again_  not_italic_embedded _italic__again_
+       ;; _italic_, not italic _italic again__ not italic          _italic_
+       (,(rx space
+             (group
+              (or (: ?* (not (any space "\r\n*"))
+                     (* (or (not (any ?*))
+                            (: (+ ?*) (not (any space punctuation "\r\n")))))
+                     ?*)
+                  (: ?_ (not (any space "\r\n_"))
+                     (* (or (not (any ?_))
+                            (: (+ ?_) (not (any space punctuation "\r\n")))))
+                     ?_)))
+             (or (any space punctuation "\r\n") eol))
+        (1 (quote italic) prepend nil))
+       ;; **bold**  not bold   **bold*again**  not**bold**embedded **bold***again**
+       ;; **bold**, not bold   **bold again*** not bold            **bold**
+       ;; __bold__  not bold   __bold_again__  not__bold__embedded __bold___again__
+       ;; __bold__, not bold   __bold again___ not bold            __bold__
+       (,(rx space
+             (group
+              (or (: "**" (not (any space "\r\n*"))
+                     (* (or (: (? ?*) (not (any ?*)))
+                            (: (+ "*") (not (any space punctuation "\r\n")))))
+                     "**")
+                  (: "__" (not (any space "\r\n_"))
+                     (* (or (: (? ?_) (not (any ?_)))
+                            (: (+ "_") (not (any space punctuation "\r\n")))))
+                     "__")))
+             (or (any space punctuation "\r\n") eol))
+        (1 (quote bold) prepend nil))
+       ))))
 
 
 (defun highlight-doxygen-forward-search (matcher limit)
