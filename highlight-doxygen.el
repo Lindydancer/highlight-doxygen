@@ -1643,6 +1643,10 @@ Treat consecutive line comments like one block."
 
 
 ;;;###autoload
+(defun highlight-doxygen ()
+  (highlight-doxygen-mode))
+
+;;;###autoload
 (define-global-minor-mode highlight-doxygen-global-mode highlight-doxygen-mode
   (lambda ()
     (when (apply #'derived-mode-p highlight-doxygen-modes)
