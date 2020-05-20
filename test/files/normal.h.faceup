@@ -436,7 +436,7 @@
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:sa» This is a paragraph with links like this one
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «:highlight-doxygen-link:http://www.some-company.com/a%20page.html» and
-»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «f:function_like_this_one()».
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! «f:function_like_this_one»().
 »»
 «k:class» «t:TestSeeAlso»
 {
@@ -560,7 +560,7 @@
 
 «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! End-of-line code.
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
-»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:fn» «:highlight-doxygen-code-block:«t:void» »«f:«:highlight-doxygen-code-block:«f:f»()»»«:highlight-doxygen-code-block:;»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:fn» «:highlight-doxygen-code-block:«t:void» »«f:«:highlight-doxygen-code-block:«f:f»»»«:highlight-doxygen-code-block:();»
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:var» «:highlight-doxygen-code-block:«t:int» «v:x»;»
 »»«:highlight-doxygen-comment:
@@ -581,7 +581,7 @@
   «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A function.
 »»  TestFunction(«t:int»);
 
-  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «f:«:highlight-doxygen-code-block:TestFunction()»»
+  «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «f:«:highlight-doxygen-code-block:TestFunction»»«:highlight-doxygen-code-block:()»
 »»  «t:int» «f:TestFunction2»(«t:int» «v:parameter»);
 
   «m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! \«:highlight-doxygen-command:copydoc» «:highlight-doxygen-code-block:TestFunction(«t:int»)»

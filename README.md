@@ -1,7 +1,7 @@
 # highlight-doxygen - Highlight Doxygen comments
 
 *Author:* Anders Lindgren<br>
-*Version:* 0.0.1<br>
+*Version:* 0.0.2<br>
 *URL:* [https://github.com/Lindydancer/highlight-doxygen](https://github.com/Lindydancer/highlight-doxygen)<br>
 
 Advanced highlighting package for Doxygen comments.

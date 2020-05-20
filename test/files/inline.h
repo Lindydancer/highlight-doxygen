@@ -37,4 +37,4 @@ class TestInline
 {
 };
 
-/// inline.h ends here
+// inline.h ends here

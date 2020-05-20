@@ -134,5 +134,24 @@ class TestDotBlock
 //!	true;        // Tab
 //!   }              // Spaces
 //!         \endcode
+//!
+//! Multiple tabs.
+//!
+//!         \code
+//!             if (true)  // Spaces
+//!		{          // Tab
+//!		  true;    // Tab
+//!             }          // Spaces
+//!         \endcode
+//!
+//! Not aligned.
+//!
+//!         \code
+//!           if (true)  // Spaces
+//!           {          // Spaces
+//!		true;    // Tab
+//!           }          // Spaces
+//!         \endcode
+//!
 
 // code.h ends here

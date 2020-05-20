@@ -5,7 +5,7 @@
 ;; Author: Anders Lindgren
 ;; Keywords: faces
 ;; Created: 2016-02-12
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; URL: https://github.com/Lindydancer/highlight-doxygen
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -530,6 +530,23 @@ Return indentation for first line in paragraph, or nil if LIMIT is reached."
           (not res))
       (forward-line))
     res))
+
+
+(defun highlight-doxygen-end-of-paragraph-position (limit)
+  "Return the position of the end of the current paragraph, or nil.
+
+LIMIT is the end of the Doxygen comment."
+  (save-excursion
+    ;; Skip empty lines.
+    (while (and (< (point) limit)
+                (not (highlight-doxygen-current-indentation)))
+      (forward-line))
+    (let ((res nil))
+      (while (and (< (point) limit)
+                  (highlight-doxygen-current-indentation))
+        (setq res (line-end-position))
+        (forward-line))
+      res)))
 
 
 ;; Doxygen treats a block as a code block when it's indented four
@@ -1173,7 +1190,7 @@ Note that these rules can't contain anchored rules themselves."
 
        ;; --------------------
        ;; Function name
-       ("\\_<\\(\\(\\sw\\)+()\\)"
+       ("\\_<\\(\\(\\sw\\)+\\)()"
         (1 font-lock-function-name-face prepend))
 
        ;; --------------------
@@ -1361,15 +1378,17 @@ is called as a function.
 
 Do not search past LIMIT."
   (let (res)
-    (while (let ((old-point (point)))
-             (setq res (and (if (stringp matcher)
-                                (re-search-forward matcher limit t)
-                              (funcall matcher limit))
-                            ;; Without this, if the matcher function
-                            ;; doesn't move the point, Emacs hangs.
-                            (< old-point (point))))
-             (and res
-                  (get-text-property (point) 'highlight-doxygen-code))))
+    (while (and
+            (setq res (let ((old-point (point)))
+                        (and
+                         (< (point) limit)
+                         (if (stringp matcher)
+                             (re-search-forward matcher limit t)
+                           (funcall matcher limit))
+                         ;; If the matcher function succeeds but
+                         ;; doesn't move the point, Emacs hangs.
+                         (< old-point (point)))))
+            (get-text-property (point) 'highlight-doxygen-code)))
     res))
 
 
@@ -1599,6 +1618,7 @@ Treat consecutive line comments like one block."
 
 (defvar highlight-doxygen--old-c-doc-rules nil)
 
+;;;###autoload
 (define-minor-mode highlight-doxygen-mode
   "Minor mode that highlights Doxygen comments."
   :group 'highlight-doxygen

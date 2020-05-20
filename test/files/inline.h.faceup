@@ -27,15 +27,15 @@
 »
 «m:// »«x:Code:
 »
-«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A function «f:my_func()» is highlighted.
+«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A function «f:my_func»() is highlighted.
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
-»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A qualified function «t:my_class»::«f:my_func()» is highlighted.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A qualified function «t:my_class»::«f:my_func»() is highlighted.
 »»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
-»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A qualified function «t:my_class»#«f:my_func()» is highlighted.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! A qualified function «t:my_class»#«f:my_func»() is highlighted.
 »»
 «k:class» «t:TestInline»
 {
 };
 
-«m:«:highlight-doxygen-comment:/// »»«x:«:highlight-doxygen-comment:inline.h ends here
-»»
+«m:// »«x:inline.h ends here
+»

@@ -159,6 +159,57 @@ foo(\"bla //! bla\""))
 
 
 ;; ------------------------------------------------------------
+;; Test `highlight-doxygen-end-of-paragraph-position'
+;;
+
+(defun highlight-doxygen-test-eopp (position limit &optional explain)
+  "Check that the end of paragraph is POSITION.
+
+Move point to the next beginning of next line."
+  (prog1
+      (funcall
+       (if explain
+           (get 'equal 'ert-explainer)
+         #'equal)
+       (highlight-doxygen-end-of-paragraph-position limit)
+       position)
+    (unless explain
+      (forward-line))))
+
+(put 'highlight-doxygen-test-eopp
+     'ert-explainer
+     (lambda (position limit)
+       (highlight-doxygen-test-eopp position limit t)))
+
+
+(ert-deftest highlight-doxygen-test-eopp ()
+  "Test `highlight-doxygen-end-of-paragraph-position'."
+  (with-temp-buffer
+    (c++-mode)
+    (let (p1 p2 p3)
+      (save-excursion
+        (insert "//! XXXXX\n")
+        (setq p1 (- (point) 1))
+        (insert "//!\n")
+        (insert "//! XXXXX\n")
+        (insert "//! XXXXX\n")
+        (setq p2 (- (point) 1))
+        (insert "//!    \n")
+        (insert "//! XXXXX\n")
+        (setq p3 (- (point) 1))
+        (insert "//!\n")
+        (insert "//!\n"))
+      (should (highlight-doxygen-test-eopp p1 (point-max)))
+      (should (highlight-doxygen-test-eopp p2 (point-max)))
+      (should (highlight-doxygen-test-eopp p2 (point-max)))
+      (should (highlight-doxygen-test-eopp p2 (point-max)))
+      (should (highlight-doxygen-test-eopp p3 (point-max)))
+      (should (highlight-doxygen-test-eopp p3 (point-max)))
+      (should (highlight-doxygen-test-eopp nil (point-max)))
+      (should (highlight-doxygen-test-eopp nil (point-max))))))
+
+
+;; ------------------------------------------------------------
 ;; The end
 ;;
 

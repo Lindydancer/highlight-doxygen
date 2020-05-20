@@ -134,6 +134,25 @@
 »»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!«:highlight-doxygen-code-block:	«c:true»;        «:highlight-doxygen-code-block:// Tab»
 »»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!   «:highlight-doxygen-code-block:}              «:highlight-doxygen-code-block:// Spaces»
 »»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Multiple tabs.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!             «:highlight-doxygen-code-block:«k:if» («c:true»)  «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!		«:highlight-doxygen-code-block:{          «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!		«:highlight-doxygen-code-block:  «c:true»;    «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!             «:highlight-doxygen-code-block:}          «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:! Not aligned.
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:code»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!           «:highlight-doxygen-code-block:«k:if» («c:true»)  «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!           «:highlight-doxygen-code-block:{          «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!	«:highlight-doxygen-code-block:	«c:true»;    «:highlight-doxygen-code-block:// Tab»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!           «:highlight-doxygen-code-block:}          «:highlight-doxygen-code-block:// Spaces»
+»»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!         \«:highlight-doxygen-command:endcode»
+»»«m:«:highlight-doxygen-comment://»»«x:«:highlight-doxygen-comment:!
 »»
 «m:// »«x:code.h ends here
 »
