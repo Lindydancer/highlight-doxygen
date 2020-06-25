@@ -242,6 +242,30 @@ public:
   //!
   //!         Is this a code block? (NO, according to Doxygen)
   void TestMixExplicitAndImplicit();
+
+  //! Inline markup
+  //!
+  //! `code`    not code   `code`again`    not`code`embedded   `code``again`
+  //!
+  //! `code`,   not code   `code again``   not code            `code`
+  //!
+  //! *italic*  not italic *italic*again*  not*italic*embedded *italic**again*
+  //!
+  //! *italic*, not italic *italic again** not italic          *italic*
+  //!
+  //! _italic_  not italic _italic_again_  not_italic_embedded _italic__again_
+  //!
+  //! _italic_, not italic _italic again__ not italic          _italic_
+  //!
+  //! **bold**  not bold   **bold*again**  not**bold**embedded **bold***again**
+  //!
+  //! **bold**, not bold   **bold again*** not bold            **bold**
+  //!
+  //! __bold__  not bold   __bold_again__  not__bold__embedded __bold___again__
+  //!
+  //! __bold__, not bold   __bold again___ not bold            __bold__
+  void TestInlineMarkup();
+
 };
 
 // markdown.h ends here
