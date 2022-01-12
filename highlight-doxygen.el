@@ -263,15 +263,15 @@
 
 
 (defface highlight-doxygen-comment
-  '((((background light)) :inherit font-lock-doc-face :background "grey95")
-    (((background dark))  :inherit font-lock-doc-face :background "grey30"))
+  '((((background light)) :inherit font-lock-doc-face :background "grey95" :extend t)
+    (((background dark))  :inherit font-lock-doc-face :background "grey30" :extend t))
   "The face used for Doxygen comment blocks."
   :group 'highlight-doxygen)
 
 
 (defface highlight-doxygen-code-block
-  '((((background light)) :background "grey85")
-    (((background dark))  :background "grey40"))
+  '((((background light)) :background "grey85" :extend t)
+    (((background dark))  :background "grey40" :extend t))
   "The face used to mark a code block."
   :group 'highlight-doxygen)
 
